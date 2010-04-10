@@ -1,0 +1,123 @@
+body {
+	
+}
+
+/* Top */
+div#controls {
+	height: 80px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #ccc;
+	background-image: url('top-metal.gif');
+	color: #000;
+	border-bottom: 1px solid #404040;
+}
+
+div#leftLCDCap, div#rightLCDCap {
+	height: 67px;
+	width: 19px;
+	position: absolute;
+	top: 7px;
+}
+div#leftLCDCap {
+	left: 246px;
+	background: url('left-lcd.png') repeat-x;
+}
+div#rightLCDCap {
+	right: 246px;
+	background: url('right-lcd.png') repeat-x;
+}
+div#lcd {
+	height: 67px;
+	width: auto;
+	position: absolute;
+	left: 265px;
+	right: 265px;
+	top: 7px;
+	background: url('lcd.png') repeat-x;
+}
+
+/* Main View */
+
+/* Sidebar */
+div#leftBar {
+	background-color: #d1d7e2;
+	width: 175px;
+	height: auto;
+	position: absolute;
+	top: 81px;
+	left: 0px;
+	bottom: 28px;
+	border-right: 1px solid #404040;
+}
+
+div#artworkTitle {
+	height: 16px;
+	width: 175px;
+	position: absolute;
+	bottom:176px;
+	background: #ccc url('small-metal.gif') repeat-x;
+	border-top: 1px solid #404040;
+	font-family: 'Helvetica';
+	font-size: 8pt;
+	text-align: center;
+	font-weight: bold;
+	line-height: 17px;
+}
+div#artworkContainer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 175px;
+	height: 175px;
+	background-color: #fff;
+	color: #000;
+	border-top: 1px solid #404040;
+}
+
+/* Track List */
+div#trackList {
+	line-height: 17px;
+	background: #fff url('table-bg.gif');
+	position: absolute;
+	height: auto;
+	width: auto;
+	top: 81px;
+	left: 176px;
+	right: 0px;
+	bottom: 28px;
+	font-size: 9pt;
+	font-family: 'Helvetica';
+}
+table#tracks {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+tr#tableHeader {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #404040;
+	width: 100%;
+	height: 17px;
+	background: #ccc url('small-metal.gif') repeat-x;
+}
+table#tracks th, table#tracks td {
+	margin: 0;
+	padding: 0;
+}
+
+/* Bottom */
+div#lowerControls {
+	height: 27px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: #ccc url('bottom-metal.gif') repeat-x;
+	color: #000;
+	border-top: 1px solid #404040;
+}

@@ -1,0 +1,76 @@
+8
+
+dir
+113
+http://sparkleplus.googlecode.com/svn/trunk/nl.lproj
+http://sparkleplus.googlecode.com/svn
+
+
+
+2006-12-26T17:48:19.842690Z
+72
+evands
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+60f48e4a-9719-0410-aec9-5111d4c6a560
+
+SUAutomaticUpdateAlert.nib
+dir
+
+SUAutomaticUpdateAlert.strings
+file
+
+
+
+
+2008-01-28T21:19:33.000000Z
+35f6f5d24a556bed6c4d463afc3a0e3c
+2006-12-04T02:11:41.997905Z
+61
+evands
+has-props
+
+SUUpdateAlert.nib
+dir
+
+Sparkle.strings
+file
+
+
+
+
+2008-01-28T21:19:33.000000Z
+cb41b1db7ad9a0283d424e2b28c86d44
+2006-12-22T08:42:58.079966Z
+67
+evands
+has-props
+
+SUUpdateAlert.strings
+file
+
+
+
+
+2008-01-28T21:19:33.000000Z
+7c812f859e4b80dd1a4ae022deb6fb5e
+2006-12-04T02:11:41.997905Z
+61
+evands
+has-props
+
+SUProfileInfo.nib
+dir
+

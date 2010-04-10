@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>TuneConnect</title>
+	<script type="text/javascript" src="AIRAliases.js"></script>
+	<script type="text/javascript" src="prototype.js"></script>
+	<script type="text/javascript" src="notifications.js"></script>
+	<script type="text/javascript" src="tcserver.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+	<script type="text/javascript">
+	Event.observe(window, 'load', prepareApplication);
+	function prepareApplication()
+	{
+		air.trace('Starting TuneConnect...');
+		
+		Notifications.addObserver(updateAlbumArtwork, 'albumChanged');
+		//Notifications.addObserver(updateTrackInfo, 'trackChanged');
+		prepareClient('192.168.2.2:4242');
+	}
+	
+	function updateAlbumArtwork(albumName)
+	{
+		air.trace('Update album art called...');
+		if (albumName != "")
+			$('artwork').src = server.composeURIForCommand('artwork', {'album':albumName});
+		else
+			$('artwork').src = 'no-art.png';
+	}
+	
+	function updateTrackInfo(track)
+	{
+		if (track.name == false) {
+			$('songTitle').innerHTML = 'Nothing Playing';
+			$('songArtist').innerHTML = '';
+			$('songAlbum').innerHTML = '';
+			
+			updateRating(0);
+		} else {
+			$('songTitle').innerHTML = track.name;
+			$('songArtist').innerHTML = track.artist;
+			$('songAlbum').innerHTML = track.album;
+		
+			updateRating(track.rating);
+		}
+	}
+	</script>
+</head>
+<body id="tc">
+	<img id="artwork" src="#" style="width:300px;height:300px;" />
+</body>
+</html>

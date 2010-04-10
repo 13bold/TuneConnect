@@ -1,0 +1,85 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeArchitecture = ppc;
+		activeBuildConfigurationName = Release;
+		activeExecutable = C953ADAE0D4FDB380082B27F /* Sparkle Test App */;
+		activeTarget = 8DC2EF4F0486A6940098B216 /* Sparkle */;
+		codeSenseManager = C953ADBB0D4FDB5D0082B27F /* Code sense */;
+		executables = (
+			C953ADAE0D4FDB380082B27F /* Sparkle Test App */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 223337272;
+			PBXWorkspaceStateSaveDate = 223337272;
+		};
+		sourceControlManager = C953ADBA0D4FDB5D0082B27F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	61B5F90109C4CEE200B25A18 /* Sparkle Test App */ = {
+		activeExec = 0;
+		executables = (
+			C953ADAE0D4FDB380082B27F /* Sparkle Test App */,
+		);
+	};
+	8DC2EF4F0486A6940098B216 /* Sparkle */ = {
+		activeExec = 0;
+	};
+	C953ADAE0D4FDB380082B27F /* Sparkle Test App */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Sparkle Test App";
+		sourceDirectories = (
+		);
+	};
+	C953ADBA0D4FDB5D0082B27F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	C953ADBB0D4FDB5D0082B27F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

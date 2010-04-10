@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>TuneConnect Server</string>
+	<key>CFBundleIconFile</key>
+	<string>TuneConnect-Server</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.tuneconnect.ServerConfig</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TuneConnect Server</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.0</string>
+	<key>NSMainNibFile</key>
+	<string>TuneConnect_ServerPref</string>
+	<key>NSPrefPaneIconFile</key>
+	<string>TuneConnect_ServerPref.tiff</string>
+	<key>NSPrefPaneIconLabel</key>
+	<string>TuneConnect
+Server</string>
+	<key>NSPrincipalClass</key>
+	<string>TuneConnect_ServerPref</string>
+	<key>TCServerSettingsPath</key>
+	<string>~/Library/Preferences/net.tuneconnect.Server.plist</string>
+</dict>
+</plist>

@@ -1,0 +1,106 @@
+#browser {
+	position: relative;
+	border: 1px solid #666;
+}
+#browser li {
+	font-family: 'Helvetica', 'Trebuchet MS', sans-serif;
+	font-size: 9pt;
+	line-height: 1.7em;
+}
+#browser tr {
+	font-family: 'Helvetica', 'Trebuchet MS', sans-serif;
+	font-size: 8pt;
+	line-height: 1.3em;
+}
+#browser ul, #tracks {
+	cursor: default;
+}
+#playlists {
+	height: 500px;
+	width: 20%;
+	overflow: auto;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #d1d7e2;
+	float: left;
+}
+#playlists li {
+	margin: 0;
+	padding: 0 .5em 0 22px;
+	background-position: 3px center;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+li.selected {
+	background-color: #3d80df;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: rgba(0, 0, 0, .4) 0px 1px 1px;
+}
+
+#trackContainer {
+	height: 500px;
+	overflow: auto;
+	width: 80%;
+}
+#tracks {
+	width: 100%;
+	max-width: 100%;
+}
+#tracks th {
+	background-color: #bbb;
+	border-left: 1px solid #a5a5a5;
+	border-bottom: 1px solid #555;
+}
+tr.track td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 3px 8px;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid #d9d9d9;
+}
+tr.track.odd td {
+	background-color: #f1f5fa;
+	color: #000;
+	border-bottom: 1px solid #f1f5fa;
+}
+tr.track.selected td {
+	background-color: #3d80df;
+	color: #fff;
+	border-left: 1px solid #346dbe;
+	border-bottom: 1px solid #7daaea;
+}
+/* Special Kinds */
+li.kind_none {
+	background-image: url('userPlaylist.png');
+}
+li.kind_Music {
+	background-image: url('music.png');
+}
+li.kind_Movies {
+	background-image: url('movies.png');
+}
+li.kind_TV_Shows {
+	background-image: url('TVShows.png');
+}
+li.kind_Audiobooks {
+	background-image: url('audiobook.png');
+}
+li.kind_Purchased_Music {
+	background-image: url('purchasedMusicPlaylist.png');
+}
+li.kind_Podcasts {
+	background-image: url('podcast.png');
+}
+li.kind_folder {
+	background-image: url('folder.png');
+}
+li.kind_Party_Shuffle {
+	background-image: url('partyShuffle.png');
+}
+li.smart {
+	background-image: url('smartPlaylist.png');
+}

@@ -1,0 +1,103 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeArchitecture = ppc;
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D5B49AC048680CD000E48DA /* TCSystemBeep */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* TCSystemBeep */,
+		);
+		codeSenseManager = C9A549D10D562EF300A35BE4 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 223756516;
+			PBXWorkspaceStateSaveDate = 223756516;
+		};
+		perUserProjectItems = {
+			C9A54A020D563C6A00A35BE4 /* PBXTextBookmark */ = C9A54A020D563C6A00A35BE4 /* PBXTextBookmark */;
+			C9A54A470D56411500A35BE4 /* PBXTextBookmark */ = C9A54A470D56411500A35BE4 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C9A549D00D562EF300A35BE4 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D5B49AC048680CD000E48DA /* TCSystemBeep */ = {
+		activeExec = 0;
+	};
+	C9A549D00D562EF300A35BE4 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	C9A549D10D562EF300A35BE4 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C9A549D40D562F1D00A35BE4 /* TCSystemBeepPlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{317, 0}";
+			sepNavVisRange = "{0, 324}";
+			sepNavWindowFrame = "{{482, 364}, {750, 558}}";
+		};
+	};
+	C9A549D50D562F1D00A35BE4 /* TCSystemBeepPlugin.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {728, 854}}";
+			sepNavSelRange = "{862, 0}";
+			sepNavVisRange = "{0, 609}";
+			sepNavWindowFrame = "{{84, 402}, {750, 558}}";
+		};
+	};
+	C9A549DB0D562F7C00A35BE4 /* TCPluginInterface.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{328, 0}";
+			sepNavVisRange = "{0, 343}";
+			sepNavWindowFrame = "{{61, 423}, {750, 558}}";
+		};
+	};
+	C9A54A020D563C6A00A35BE4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9A549D50D562F1D00A35BE4 /* TCSystemBeepPlugin.m */;
+		name = "TCSystemBeepPlugin.m: 42";
+		rLen = 0;
+		rLoc = 862;
+		rType = 0;
+		vrLen = 609;
+		vrLoc = 0;
+	};
+	C9A54A470D56411500A35BE4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9A549D50D562F1D00A35BE4 /* TCSystemBeepPlugin.m */;
+		name = "TCSystemBeepPlugin.m: 42";
+		rLen = 0;
+		rLoc = 862;
+		rType = 0;
+		vrLen = 609;
+		vrLoc = 0;
+	};
+}

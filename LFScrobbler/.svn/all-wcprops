@@ -1,0 +1,75 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 22
+/lfscrobbler/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/lfscrobbler/!svn/ver/7/trunk
+END
+License.txt
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/lfscrobbler/!svn/ver/2/trunk/License.txt
+END
+NSString+LFURLAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/lfscrobbler/!svn/ver/6/trunk/NSString+LFURLAdditions.m
+END
+CocoaCryptoHashing.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/lfscrobbler/!svn/ver/2/trunk/CocoaCryptoHashing.m
+END
+Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/lfscrobbler/!svn/ver/4/trunk/Info.plist
+END
+LFScrobbler.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/lfscrobbler/!svn/ver/3/trunk/LFScrobbler.h
+END
+LFScrobbler_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/lfscrobbler/!svn/ver/2/trunk/LFScrobbler_Prefix.pch
+END
+LFResponder.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/lfscrobbler/!svn/ver/2/trunk/LFResponder.h
+END
+LFScrobbler.m
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/lfscrobbler/!svn/ver/3/trunk/LFScrobbler.m
+END
+NSString+LFURLAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/lfscrobbler/!svn/ver/2/trunk/NSString+LFURLAdditions.h
+END
+CocoaCryptoHashing.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/lfscrobbler/!svn/ver/2/trunk/CocoaCryptoHashing.h
+END
+LFResponder.m
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/lfscrobbler/!svn/ver/3/trunk/LFResponder.m
+END

@@ -1,0 +1,76 @@
+8
+
+dir
+113
+http://sparkleplus.googlecode.com/svn/trunk/da.lproj
+http://sparkleplus.googlecode.com/svn
+
+
+
+2007-01-28T04:40:29.559528Z
+75
+evands
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+60f48e4a-9719-0410-aec9-5111d4c6a560
+
+SUAutomaticUpdateAlert.nib
+dir
+
+SUAutomaticUpdateAlert.strings
+file
+
+
+
+
+2008-01-28T21:20:11.000000Z
+b9ddac3e2cf4c390e32910cdd9e87159
+2006-12-04T02:11:41.997905Z
+61
+evands
+has-props
+
+SUUpdateAlert.nib
+dir
+
+Sparkle.strings
+file
+
+
+
+
+2008-01-28T21:20:11.000000Z
+be222cf0fd2a0617b0219cafdc5d4938
+2007-01-08T23:14:55.887464Z
+73
+evands
+has-props
+
+SUUpdateAlert.strings
+file
+
+
+
+
+2008-01-28T21:20:11.000000Z
+bd5af8d2a72ea32b749c9180716b693c
+2006-12-04T02:11:41.997905Z
+61
+evands
+has-props
+
+SUProfileInfo.nib
+dir
+

@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'TuneConnect Server' target in the 'TuneConnect Server' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <AppKit/AppKit.h>
+#endif

@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica';
+}
+h1 {
+	margin: 0;
+	padding-top: 20px;
+	color: #fff;
+	font-size: 20pt;
+	height: 55px;
+	background-image: url('./top-bar.png');
+	background-repeat: repeat-x;
+	text-align: center;
+}
+
+#backButton {
+	position: absolute;
+	height: 46px;
+	width: 69px;
+	left: 7px;
+	top: 12px;
+}
+
+#assignableButton {
+	position: absolute;
+	height: 46px;
+	width: 69px;
+	right: 7px;
+	top: 12px;
+}
+
+#assignableButton p {
+	color: #fff;
+	position: absolute;
+	width: 52px;
+	height: 45px;
+	top: 6px;
+	right: 10px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#loading {
+	position: absolute;
+	color: #fff;
+	top: 3px;
+	right: 10px;
+}
+
+#contentScroll p {
+	margin: 10px 25px;
+	padding: 10px;
+	background-color: #ccc;
+	border: 1px solid #000;
+}
+
+#contentScroll ol, #contentScroll ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+#contentScroll li {
+	padding: 18px;
+	border-bottom: 1px solid #ccc;
+	font-size: 28pt;
+	font-weight: bold;
+}
+
+#contentScroll li .more {
+	color: #999;
+}
+
+#contentScroll li .line2 {
+	font-weight: bold;
+	font-size: 70%;
+	color: #ccc;
+	display: block;
+	margin-top: 2px;
+}
+
+#contentScroll li.group:after {
+	content: '>';
+	font-family: 'Courier New';
+	font-weight: bold;
+	color: #999;
+	float: right;
+	line-height: 100%;
+}
+
+#overlay {
+	background-image: url('./overlay.png');
+	width: 100%;
+	height: 350px;
+	position: fixed;
+	top: 25%;
+	color: #fff;
+	font-size: 24pt;
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: top center;
+	z-index: 20;
+}
+#overlay #message {
+	width: 330px;
+	margin-top: 70px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+#overlay #overlayImage {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 65px;
+}
+#overlay input {
+	font-size: 60%;
+	margin-top: 20px;
+}

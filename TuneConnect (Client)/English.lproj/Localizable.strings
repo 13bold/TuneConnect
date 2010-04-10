@@ -1,0 +1,47 @@
+/* Localization File */
+
+"(Unknown)" = "(Unknown)";
+"None" = "None";
+
+"Loading \"%@\"..." = "Loading \"%@\"...";
+"Checking for changes to \"%@\"..." = "Checking for changes to \"%@\"...";
+"Updating \"%@\"..." = "Updating \"%@\"...";
+
+"Not Connected" = "Not Connected";
+"Nothing Playing" = "Nothing Playing";
+"Searching for Devices..." = "Searching for Devices...";
+"Please wait..." = "Please wait...";
+"Connecting..." = "Connecting...";
+"Error!" = "Error!";
+"An error occurred during connection: %@" = "An error occurred during connection: %@";
+
+"Nothing\nPlaying" = "Nothing\nPlaying";
+"No Art\nAvailable" = "No Art\nAvailable";
+
+"Please enter your password" = "Please enter your password";
+"Invalid password. Please try again." = "Invalid password. Please try again.";
+
+"Rating: %@" = "Rating: %@";
+
+"Small" = "Small";
+"Medium" = "Medium";
+"Large" = "Large";
+
+"Play" = "Play";
+"Pause" = "Pause";
+
+"Connected to Server" = "Connected to Server";
+"A connection was made to the server at %@" = "A connection was made to the server at %@";
+
+"Track Changed" = "Track Changed";
+
+"Rating Changed" = "Rating Changed";
+
+"Bad Version Error" = "The server only supports version %@ of the protocol, but version %@ is required.";
+
+"Switch to Compact View" = "Switch to Compact View";
+"Switch to Normal View" = "Switch to Normal View";
+
+/* DO NOT LOCALIZE THESE */
+"ratingStar" = "★";
+"ratingHalf" = "½";

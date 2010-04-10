@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/1.0">
+	<id>net.tuneconnect.TuneConnectAIR</id>
+	<version>0.1</version>
+	<filename>TuneConnect</filename>
+	<name>TuneConnect</name>
+	<description>A cross-platform iTunes remote control, developed for AIR.</description>
+	<copyright>Copyright (C) 2008 Matt Patenaude.</copyright>
+	<initialWindow>
+		<content>TuneConnect.html</content>
+		<visible>true</visible>
+		<width>300</width>
+		<height>330</height>
+		<resizable>false</resizable>
+		<maximizable>false</maximizable>
+	</initialWindow>
+	<icon>
+		<image16x16>icons/smallIcon.png</image16x16>
+		<image32x32>icons/mediumIcon.png</image32x32>
+		<image48x48>icons/bigIcon.png</image48x48>
+		<image128x128>icons/fullIcon.png</image128x128>
+	</icon>
+</application>

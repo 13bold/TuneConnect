@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>TuneConnect 2</title>
+	<link rel="stylesheet" type="text/css" href="home.css" media="screen,projection" />
+	<script type="text/javascript" src="prototype.js"></script>
+	<script type="text/javascript">
+	Event.observe(window, 'load', startArtworkRotator);
+	
+	currentIndex = 0;
+	
+	tracks = [
+		{'name': 'Paralyzer', 'artist': 'Finger Eleven', 'art': 'paralyzer.png', 'elapsed': '0:18', 'remaining': '-3:10'},
+		{'name': 'Goodnight and Go', 'artist': 'Imogen Heap', 'art': 'goodnight.png', 'elapsed': '0:20', 'remaining': '-3:32'},
+		{'name': 'Love Song', 'artist': 'Sara Bareilles', 'art': 'love-song.png', 'elapsed': '0:23', 'remaining': '-3:58'}
+	];
+	
+	function startArtworkRotator() {
+		currentIndex = Math.floor(Math.random()*tracks.length);
+		updateTrackInfo();
+		//setInterval(updateTrackInfo, 4000);
+	}
+	
+	function updateTrackInfo() {
+		track = tracks[currentIndex];
+		$('trackInfo').innerHTML = track.name + '<br />' + track.artist;
+		$('timeElapsed').innerHTML = track.elapsed;
+		$('timeRemaining').innerHTML = track.remaining;
+		$('artView').src = 'artwork/' + track.art;
+		
+		if (currentIndex == (tracks.length - 1))
+			currentIndex = 0;
+		else
+			currentIndex++;
+	}
+	</script>
+</head>
+<body id="tc2">
+	<div id="container">
+		<div id="textContainer">
+			<h1>TuneConnect 2</h1>
+			<h2>Coming Soon to a Mac Near You</h2>
+		</div>
+	
+		<div id="tcPreview">
+			<div id="trackInfo">
+				Loading...
+			</div>
+			<div id="timeElapsed"></div>
+			<div id="timeRemaining"></div>
+			<img src="#" alt="Album Artwork" id="artView" />
+		</div>
+	</div>
+</body>
+</html>

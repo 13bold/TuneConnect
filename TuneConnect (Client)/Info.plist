@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>tcplugin</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>TCPlugin.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>TuneConnect Plug-in</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>net.tuneconnect.plugin</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<true/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>Binary</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>TuneConnect</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.tuneconnect.TuneConnect</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Tunage Server</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tunage</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>2.1</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>SUCheckAtStartup</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>http://www.tuneconnect.net/updates/updates.php</string>
+	<key>TCBugReportingURL</key>
+	<string>http://tuneconnect.16bugs.com/projects/666/bugs/new</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.item</string>
+				<string>com.apple.package</string>
+				<string>com.apple.bundle</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>TuneConnect Plug-in</string>
+			<key>UTTypeIconFile</key>
+			<string>TCPlugin.icns</string>
+			<key>UTTypeIdentifier</key>
+			<string>net.tuneconnect.plugin</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://www.tuneconnect.net</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>tcplugin</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

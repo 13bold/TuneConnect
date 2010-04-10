@@ -1,0 +1,156 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = ppc;
+		activeBuildConfigurationName = Release;
+		activeExecutable = C948FE180D8B5FB200580CF1 /* SInstall */;
+		activeTarget = 8D1107260486CEB800E47090 /* SInstall */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* SInstall */,
+		);
+		codeSenseManager = C948FE270D8B5FB600580CF1 /* Code sense */;
+		executables = (
+			C948FE180D8B5FB200580CF1 /* SInstall */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 233689562;
+			PBXWorkspaceStateSaveDate = 233689562;
+		};
+		perUserProjectItems = {
+			C954A0650DE9E2A700C7A942 /* PBXTextBookmark */ = C954A0650DE9E2A700C7A942 /* PBXTextBookmark */;
+			C954A0660DE9E2A700C7A942 /* PBXTextBookmark */ = C954A0660DE9E2A700C7A942 /* PBXTextBookmark */;
+			C9C183180DEDD22700CBEB15 /* PBXTextBookmark */ = C9C183180DEDD22700CBEB15 /* PBXTextBookmark */;
+			C9C183190DEDD22700CBEB15 /* PBXTextBookmark */ = C9C183190DEDD22700CBEB15 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C948FE260D8B5FB600580CF1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* SInstall */ = {
+		activeExec = 0;
+		executables = (
+			C948FE180D8B5FB200580CF1 /* SInstall */,
+		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 431}}";
+			sepNavSelRange = "{714, 0}";
+			sepNavVisRange = "{0, 855}";
+			sepNavWindowFrame = "{{15, 464}, {748, 559}}";
+		};
+	};
+	C948FE180D8B5FB200580CF1 /* SInstall */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = SInstall;
+		sourceDirectories = (
+		);
+	};
+	C948FE260D8B5FB600580CF1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	C948FE270D8B5FB600580CF1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C954A0650DE9E2A700C7A942 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C919950D8B81CC00532FED /* SIFacilitator.m */;
+		name = "SIFacilitator.m: 58";
+		rLen = 0;
+		rLoc = 2012;
+		rType = 0;
+		vrLen = 1305;
+		vrLoc = 868;
+	};
+	C954A0660DE9E2A700C7A942 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C919940D8B81CC00532FED /* SIFacilitator.h */;
+		name = "SIFacilitator.h: 14";
+		rLen = 0;
+		rLoc = 282;
+		rType = 0;
+		vrLen = 313;
+		vrLoc = 0;
+	};
+	C9C183180DEDD22700CBEB15 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C919950D8B81CC00532FED /* SIFacilitator.m */;
+		name = "SIFacilitator.m: 58";
+		rLen = 0;
+		rLoc = 2012;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 868;
+	};
+	C9C183190DEDD22700CBEB15 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C9C919940D8B81CC00532FED /* SIFacilitator.h */;
+		name = "SIFacilitator.h: 14";
+		rLen = 0;
+		rLoc = 282;
+		rType = 0;
+		vrLen = 313;
+		vrLoc = 0;
+	};
+	C9C919940D8B81CC00532FED /* SIFacilitator.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 431}}";
+			sepNavSelRange = "{282, 0}";
+			sepNavVisRange = "{0, 313}";
+			sepNavWindowFrame = "{{157, 159}, {748, 559}}";
+		};
+	};
+	C9C919950D8B81CC00532FED /* SIFacilitator.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {888, 938}}";
+			sepNavSelRange = "{2012, 0}";
+			sepNavVisRange = "{868, 1304}";
+			sepNavWindowFrame = "{{55, 170}, {748, 559}}";
+		};
+	};
+}

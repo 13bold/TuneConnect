@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>TC Sever Reliability Test</title>
+	<script type="text/javascript" src="prototype.js"></script>
+	<script type="text/javascript" src="tcserver.js"></script>
+	<script type="text/javascript">
+	Event.observe(window, 'load', prepareClient);
+	
+	fetching = false;
+	
+	function prepareClient() {
+		server = new TCServer();
+		
+		server.serverConnected = serverConnected;
+		server.authKeyResponseReceived = authKeyResponseReceived;
+		server.serverReady = serverReady;
+	}
+	
+	function serverConnected(theServer) {
+		if (server.requiresPassword) {
+			password = prompt('Please enter the server password:', '');
+			server.getAuthKeyForPassword(password);
+		}
+	}
+	
+	function authKeyResponseReceived(success) {
+		if (!success) {
+			password = prompt('Incorrect password. Please enter the server password:', '');
+			server.getAuthKeyForPassword(password);
+		}
+	}
+	
+	function serverReady(theServer) {
+		$('serverResponse').innerHTML = 'Server ready.';
+	}
+	
+	function startPolling() {
+		myInteral = setInterval(execCommand, 2000);
+	}
+	
+	function stopPolling() {
+		clearInterval(myInterval);
+	}
+	
+	function execCommand() {
+		if (fetching) logError('Server stopped responding');
+		$('serverResponse').innerHTML = 'Contacting server...';
+		fetching = true;
+		server.doCommand('fullStatus', null, processStatus, false);
+	}
+	
+	function processStatus(response) {
+		fetching = false;
+		if (!response) logError('Null response received');
+		$('serverResponse').innerHTML = response;
+	}
+	
+	function logError(errorString) {
+		now = new Date();
+		errorLi = document.createElement('li');
+		errorLi.innerHTML = '<strong>' + errorString + '</strong> at ' + now.toString();
+		$('errors').appendChild(errorLi);
+	}
+	</script>
+</head>
+<body id="reliability-test">
+	<h1>TuneConnect Reliability Test</h1>
+	
+	<p>This script will execute a <code>fullStatus</code> command on the server every two seconds until stopped, and print out the results below.</p>
+	
+	<p><button onclick="startPolling();">Start</button> <button onclick="stopPolling();">Stop</button>
+	
+	<pre id="serverResponse">Connecting...</pre>
+	
+	<ul id="errors">
+		
+	</ul>
+</body>
+</html>

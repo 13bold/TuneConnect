@@ -1,0 +1,141 @@
+Changelog for TuneConnect for Mac
+
+Changes from version 2.0 to 2.1:
+* Fixed command double-send bug
+* Fixed (?) cut-off UI glitches
+* Fixed bezel UI glitches
+* Fixed "window closed" undefined behavior
+* Modified "zoom button" behavior to better mirror iTunes
+* Streamlined server install process
+* Added support for externally-located iTunes libraries
+* Added ability to add multiple songs to Party Shuffle simultaneously
+* Modified "no artwork available" display
+* Bundled Last.fm plug-in with client
+* Made Music Browser window resizable
+* Added server support for iPhone/iPod Touch client (Tunage v1.2)
+
+- Fixed command double-send bug
+-- This was the trickiest bug I've probably ever had to work on, and I'm
+-- so glad that it's finally resolved. Basically, here's what would happpen:
+-- if two commands were sent in quick succession, the second command would be
+-- doubled up, for whatever reason. So, for instance, if the user tried to
+-- skip to the next track immediately after the client loaded artwork, two
+-- tracks would be skipped. I couldn't find any problems with my own code,
+-- and as it turns out, there *were* none. :P A combination of Twisted.Web
+-- and CFNetwork/NSURLConnection are misbehaving in tandem in the way that
+-- they handle certain requests. In any event, since the problem was not in
+-- my own code, I felt no qualms about implementing a patchy workaround.
+-- Behavior is now much better, and track scrubbing even behaves more
+-- appropriately now. :)
+
+- Fixed (?) cut-off UI glitches
+-- A few users reported seeing half cut-off LCD windows, which is behavior
+-- that I had never witnessed. However, all of these users were using non-
+-- English languages as their system defaults. I recalled that I had split
+-- my UI file into English and French in preparation for a localization that
+-- never made it into the release, but had forgotten to repair a few crucial
+-- pieces of the French UI. I'm *guessing* that this was the source of the
+-- problems. I've merged them back into a single file, and I *hope* that will
+-- fix the UI glitches people observed.
+
+- Fixed bezel UI glitches
+-- In 2.0, TuneConnect listened to the window:didBecomeKey: and
+-- window:didResignKey: delegate messages to detect when it needed to replace
+-- its customized bezel images with the correct active/inactive state ones.
+-- A curious use case occurred, however: when viewing the About box, the
+-- images swapped out, but the window itself did not become inactive as far
+-- as the OS was concerned, so it looked horrible. I switched the app to
+-- listen to the didBecome*Main*/didResignMain messages instead, and it now
+-- all works as intended.
+
+- Fixed "window closed" undefined behavior
+-- TuneConnect user Ryan Dunn reported a large list of bugs/observed
+-- abnormalities, for which I'm very thankful, one of which was that I had
+-- neglected to define a behavior for when the main TC window was closed:
+-- the application neither quit, nor was it possible to reopen the window. I
+-- thought the matter over, and decided it was most appropriate for the app
+-- to quit when the last window was closed. So thus, that is the new
+-- behavior.
+
+- Modified "zoom button" behavior to better mirror iTunes
+-- Another thing that Ryan pointed out was that the zoom button (the little
+-- green one, aka maximize button) did not quite mirror the behavior of
+-- iTunes when it came to switching in and out of the mini-player. I
+-- discussed and debated the matter with Andy Matuschak and the voices inside
+-- my head, and eventually opted to modify the behavior in some ways. It is
+-- far too strenuous for me to describe the exact conditional behavior the
+-- zoom button now follows, but trust me: it *feels* natural.
+
+- Streamlined server install process
+-- In the 2.0 release, I wrote a PyObjC app to facilitate the installation of
+-- of the TuneConnect Server preference pane. Unfortunately, it was bloated,
+-- slow, and did not take user choice into consideration with regards to
+-- where the preference pane was stored (~/Library/PreferencePanes vs.
+-- /Library/PreferencePanes), and also failed if the PreferencePanes
+-- directory didn't already exist. It was a small disaster. Anyway, I rewrote
+-- the app in pure Objective-C using LaunchServices to install the pane,
+-- which obeys whatever choices the user has previously selected, or allows
+-- them to choose at runtime where they'd like the pane installed. It's much
+-- faster, and much more stable. Incidentally, the whole reason I need the
+-- installer app in the first place is because the old server *must* be
+-- stopped before the new server is installed. I *could* just tell my users
+-- to make sure they stop the old server before installing the new one... but
+-- that's not a chance I'm willing to take. ;)
+
+- Added support for externally-located iTunes libraries
+-- This was a fun bug to fix. A user reported on our bug tracking website
+-- that playlists were not showing up in their copy of TuneConnect. Before
+-- I even had a chance to start investigating, other users also posted on the
+-- bug, and started identifying common factors between them for me
+-- (identifying points of commonality, as any logical person knows, is the
+-- foundation of debugging). In a very short amount of time, the TC users had
+-- determined that the problem was occurring for people with externally-
+-- located iTunes libraries (on an external HD, for example). I wrote a patch
+-- for the server, and now even users with the strangest file configurations
+-- should be well-accommodated.
+
+- Added ability to add multiple songs to Party Shuffle simultaneously
+-- This one was a simple request to fulfill. You can now select multiple
+-- tracks in the browser, and right-click them while highlighted to add or
+-- queue them to the Party Shuffle playlist. Order occasionally gets messed
+-- up a bit, but they all get added to the Shuffle list, what more do you
+-- want from me? :P
+
+- Modified "no artwork available" display
+-- The whole grey "No Art Available" text on a white background was getting
+-- annoying-- I just wasn't feeling it. So I took a hi-res version of the TC
+-- icon, colored it blue, and set *it* against a white background. Voila:
+-- instant sexy "no artwork available" indicator.
+
+- Bundled Last.fm plug-in with client
+-- Last.fm is a great service, I absolutely love it. Up until TuneConnect,
+-- however, there was no good Objective-C framework to communicate with it.
+-- What is a developer to do but make one? I created the LFScrobbler
+-- framework for use with TuneConnect, but by the time I released 2.0, I had
+-- still not heard back from the people at Last.fm with my client ID-- the
+-- response came about two days after I released it. At that point, I entered
+-- the ID into the plug-in and posted it online for after-market
+-- installation. Now of course this is no longer an issue, so the plug-in has
+-- henceforth been bundled with the distribution. :)
+
+- Made Music Browser window resizable
+-- This was the single biggest request out of all the requested features for
+-- TuneConnect. Now you have it. :)
+
+- Added server support for iPhone/iPod Touch client (Tunage v1.2)
+-- *whistles* What? iPhone client? What are you talking about? Who told you
+-- that?
+
+-------------------------------------------
+
+Changes from version 1.1 to 2.0:
+* Completely rewritten from the ground up
+* Incredible speed increases
+* Global hotkeys
+* More responsive user interface
+* And many more new features!
+
+TuneConnect 2.0 is a complete rewrite of TuneConnect from the ground up on an
+entirely new architecture. Comparing TuneConnect 2.0 to TuneConnect 1.1 is
+like comparing apples to oranges. Suffice it to say that TuneConnect 2.0 is
+unlike any iTunes remote controller you've ever used. We promise.

@@ -1,0 +1,35 @@
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+#container {
+	margin-top: 30px;
+}
+
+#tcTop {
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	font-size: 36pt;
+	margin: 20px 0 0 0;
+	text-align: center;
+}
+
+h2 {
+	font-size: 20pt;
+	margin: 0;
+	text-align: center;
+}
+
+#oldSiteLink {
+	text-align: center;
+	margin-top: 60px;
+}
+#oldSiteLink a {
+	color: #fff;
+	font-size: 9pt;
+}

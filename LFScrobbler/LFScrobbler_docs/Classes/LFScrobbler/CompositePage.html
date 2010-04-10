@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style><head>
+    <title>LFScrobbler</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">LFScrobbler</font></h1><br>
+<a name="//apple_ref/doc/class/LFScrobbler" title="LFScrobbler"></a>
+<h2>Abstract</h2>
+ An LFScrobbler object is used to maintain communication with the Audioscrobbler service.
+<h2>Discussion</h2>
+ The purpose of the LFScrobbler class is to encapsulate all of the functions necessary to compute
+information for Audioscrobbler into one centrallized location. All you, the developer, needs to do is
+tell your LFScrobbler object (created the normal way, [[LFScrobbler alloc] init]) when a new track starts
+playing, when your user pauses the client, when they resume from being paused, and when they stop the
+client. LFScrobbler takes care of all the logic required to decide whether or not a track should be
+scrobbled, and does the scrobbling if it's required.
+<hr><br><h2>Methods</h2>
+<a name="HeaderDoc_methods"></a>
+<dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/setDelegate%58" target="_top">setDelegate:</a></tt></dt>
+<dd>Set the delegate of the LFScrobbler object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/delegate" target="_top">delegate</a></tt></dt>
+<dd>Get the delegate used by the LFScrobbler object.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/setClientID%58version%58" target="_top">setClientID:version:</a></tt></dt>
+<dd>Set the client ID of your software for use with Audioscrobbler.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/loginWithUsername%58password%58" target="_top">loginWithUsername:password:</a></tt></dt>
+<dd>Login to the Last.fm service.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/playTrack%58" target="_top">playTrack:</a></tt></dt>
+<dd>Tell LFScrobbler that a new track has started playing.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/stop" target="_top">stop</a></tt></dt>
+<dd>Tell LFScrobbler that the current track has stopped playing.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/pause" target="_top">pause</a></tt></dt>
+<dd>Tell LFScrobbler that the user has paused the client.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/resume" target="_top">resume</a></tt></dt>
+<dd>Tell LFScrobbler that the user has resumed playing the track.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/LFScrobbler/endSession" target="_top">endSession</a></tt></dt>
+<dd>Indicate that a session has ended.
+</dd>
+</dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/delegate; name=LFScrobbler::delegate -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/delegate"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="delegate">delegate</a></h2>
+</td></tr></table><dl>Get the delegate used by the LFScrobbler object.
+
+</dl><blockquote><pre>- ( id ) delegate;
+</pre></blockquote>
+<dl><dt><i>method result</i></dt><dd>Returns the delegate of the LFScrobbler object.
+</dd>
+</dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/endSession; name=LFScrobbler::endSession -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/endSession"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="endSession">endSession</a></h2>
+</td></tr></table><dl>Indicate that a session has ended.
+
+</dl><blockquote><pre>- ( void ) endSession;
+</pre></blockquote>
+<p>This method performs a "stop" and sends any un-Scrobbled changes to Audioscrobbler. Note that
+this method uses a blocking request, rather than an asynchronous one. This can present problems, but also
+allows you to use it in an applicationWillQuit: environment.
+</p>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/loginWithUsername%58password%58; name=LFScrobbler::loginWithUsername:password: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/loginWithUsername%58password%58"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="loginWithUsername%58password%58">loginWithUsername:password:</a></h2>
+</td></tr></table><dl>Login to the Last.fm service.
+
+</dl><blockquote><pre>- ( void ) loginWithUsername:
+        (NSString *) username password:
+        (NSString *) password;
+</pre></blockquote>
+<p>This method performs a handshake with the Scrobbler service to begin communication.
+It is recommended that you store the username and password in the Keychain, rather than in cleartext.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>username</em></tt></dt><dd>Username of the application's user on Last.fm.</dd>
+<dt><tt><em>password</em></tt></dt><dd>Password of the application's user on Last.fm.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/pause; name=LFScrobbler::pause -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/pause"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="pause">pause</a></h2>
+</td></tr></table><dl>Tell LFScrobbler that the user has paused the client.
+
+</dl><blockquote><pre>- ( void ) pause;
+</pre></blockquote>
+<p>This method stops the play counter temporarily, which is important for sending
+accurate play statisticts to Last.fm
+</p>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/playTrack%58; name=LFScrobbler::playTrack: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/playTrack%58"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="playTrack%58">playTrack:</a></h2>
+</td></tr></table><dl>Tell LFScrobbler that a new track has started playing.
+
+</dl><blockquote><pre>- ( void ) playTrack:
+        (NSDictionary *) track;
+</pre></blockquote>
+<p>It is unnecessary to first send a <!-- a logicalPath="//apple_ref/occ/instm/LFScrobbler/stop" -->stop<!-- /a --> command to LFScrobbler: calling playTrack:
+automatically does this.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>track</em></tt></dt><dd>Information on the track that has just started playing. The dictionary should contain the following keys:
+name (NSString): track's name;
+artist (NSString): track's artist;
+album (NSString): track's album (empty string if not known);
+mbID (NSString): MusicBrainz ID (optional);
+length (NSNumber): track's length in seconds;
+number (NSNumber): track's position on album (optional);</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/resume; name=LFScrobbler::resume -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/resume"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="resume">resume</a></h2>
+</td></tr></table><dl>Tell LFScrobbler that the user has resumed playing the track.
+
+</dl><blockquote><pre>- ( void ) resume;
+</pre></blockquote>
+<p>This resumes the play counter where it left off.
+</p>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/setClientID%58version%58; name=LFScrobbler::setClientID:version: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/setClientID%58version%58"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="setClientID%58version%58">setClientID:version:</a></h2>
+</td></tr></table><dl>Set the client ID of your software for use with Audioscrobbler.
+
+</dl><blockquote><pre>- ( void ) setClientID:
+        (NSString *) newID version:
+        (NSString *) newVersion;
+</pre></blockquote>
+<p>All clients interfacing with Last.fm are required to have their own client ID. Obtain one for
+your client by contacting russ@last.fm, then assign it with this method before logging in. You should
+also provide the version of your application. If a client ID is not set, the testing ID will be used.
+</p>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>newID</em></tt></dt><dd>The client ID assigned to you by Last.fm.</dd>
+<dt><tt><em>newVersion</em></tt></dt><dd>The version of your client.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/setDelegate%58; name=LFScrobbler::setDelegate: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/setDelegate%58"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="setDelegate%58">setDelegate:</a></h2>
+</td></tr></table><dl>Set the delegate of the LFScrobbler object.
+
+</dl><blockquote><pre>- ( void ) setDelegate:
+        (id ) newDelegate;
+</pre></blockquote>
+<h5><font face="Lucida Grande,Helvetica,Arial">Parameter Descriptions</font></h5>
+<blockquote>
+<dl>
+<dt><tt><em>newDelegate</em></tt></dt><dd>An object to act as a delegate of the LFScrobbler object, implementing any assortment of
+methods from <!-- a logicalPath="" -->LFScrobblerDelegate<!-- /a -->.</dd>
+</dl>
+</blockquote>
+<dl></dl>
+<hr><!-- headerDoc=instm; uid=//apple_ref/doc/compositePage/occ/instm/LFScrobbler/stop; name=LFScrobbler::stop -->
+<a name="//apple_ref/doc/compositePage/occ/instm/LFScrobbler/stop"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h2><a name="stop">stop</a></h2>
+</td></tr></table><dl>Tell LFScrobbler that the current track has stopped playing.
+
+</dl><blockquote><pre>- ( void ) stop;
+</pre></blockquote>
+<p>Sending this will Scrobble the track, if the previous track has been playing
+for more than 320 seconds. Alternatively, you can simply send a playTrack: command if a new track
+has started playing (you do not need to send both commands).
+</p>
+<dl></dl>
+<p>(Last Updated 2/21/2008)
+</p></body></html>

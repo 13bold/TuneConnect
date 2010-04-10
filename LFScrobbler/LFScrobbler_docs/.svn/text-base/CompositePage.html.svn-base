@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><style type="text/css"><!--a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style><head>
+    <title>LFScrobber.framework</title>
+	 <meta name="generator" content="HeaderDoc">
+</head><body bgcolor="#ffffff">
+<h1><font face="Geneva,Arial,Helvtica">LFScrobber.framework</font></h1><br>
+<a name="//apple_ref/doc/header/LFScrobbler%46h" title="LFScrobber.framework"></a>
+<h2>Discussion</h2>
+LFScrobbler is a framework for interfacing with Last.fm's Audioscrobbler technology.<hr><br><h2>Classes</h2>
+<dl>
+<dt><tt><a href="Classes/LFScrobbler/CompositePage.html#//apple_ref/doc/class/LFScrobbler" target="_top">LFScrobbler</a></tt></dt>
+<dd> An LFScrobbler object is used to maintain communication with the Audioscrobbler service.
+</dd>
+</dl>
+<h2>Categories</h2>
+<dl>
+<dt><tt><a href="Categories/NSObject_LFScrobblerDelegate_/CompositePage.html#//apple_ref/doc/class/NSObject(LFScrobblerDelegate)" target="_top">NSObject(LFScrobblerDelegate)</a></tt></dt>
+<dd> Methods for delegates of LFScrobbler.
+</dd>
+</dl>
+<hr><br><p>(Last Updated 2/21/2008)
+</p></body></html>

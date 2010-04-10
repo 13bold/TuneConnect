@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=480;maximum-scale=1;user-scalable=false" />
+	<title>Mobility</title>
+	<link type="text/css" rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="../prototype.js"></script>
+	<script type="text/javascript" src="../tcserver.js"></script>
+	<script type="text/javascript" src="browser-detect.js"></script>
+	<script type="text/javascript" src="client-logic.js"></script>
+</head>
+<body id="iphone">
+	<h1 id="header">TuneConnect</h1>
+	
+	<div id="backButton" style="display: none;">
+		<img src="./back.png" alt="Back" />
+	</div>
+	
+	<div id="assignableButton" style="display: none;">
+		<img src="./assignable.png" alt="Do Something" />
+		<p id="assignableMessage"></p>
+	</div>
+	
+	<div id="contentScroll">
+		
+	</div>
+	
+	<div id="overlay" style="display: none;">
+		<p id="message">Loading...</p>
+		
+		<div id="passwordForm"></div>
+		
+		<p id="overlayImage"><img id="statusImage" src="#" alt="Status" /></p>
+	</div>
+</body>
+</html>

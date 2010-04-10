@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>TuneConnect Web</title>
+	<link rel="stylesheet" type="text/css" href="browser.css" media="screen,projection" />
+	<script type="text/javascript" src="../prototype.js"></script>
+	<script type="text/javascript" src="../notifications.js"></script>
+	<script type="text/javascript" src="../tcserver.js"></script>
+	<script type="text/javascript" src="pseudoconsole.js"></script>
+	<script type="text/javascript" src="browser.js"></script>
+	<script type="text/javascript">
+	server = null;
+	Event.observe(window, 'load', prepareApplication);
+	
+	function prepareApplication() {
+		prepareClient();
+		pc.element = $('pc');
+		pc.alert('Ready to go!');
+	}
+	
+	function prepareClient() {
+		server = new TCServer();
+
+		server.serverConnected = serverConnected;
+		server.authKeyResponseReceived = authKeyResponseReceived;
+		server.serverReady = serverReady;
+		setTimeout(function(){server.connect();}.bind(this), 200);
+	}
+	
+	function serverConnected(theServer) {
+		if (server.requiresPassword) {
+			//password = prompt('Please enter the server password:', '');
+			//server.getAuthKeyForPassword(password);
+			pc.log('Omitting password check...');
+			server.getAuthKeyForPassword('codexrosie');
+		}
+		// REENABLE THIS!!
+	}
+
+	function authKeyResponseReceived(success) {
+		if (!success) {
+			password = prompt('Incorrect password. Please enter the server password:', '');
+			server.getAuthKeyForPassword(password);
+		}
+	}
+	
+	function serverReady(theServer) {
+		getSources();
+		pc.log('Loading sources...');
+	}
+	</script>
+</head>
+<body id="tc">
+	<h1>TuneConnect Web - Experimental</h1>
+	
+	<p>Right now, we're working on an experimental track browser for the web.</p>
+	
+	<h2>Browser</h2>
+	<p id="sourceContainer">Getting Source Information...</p>
+	<p><a href="#" onclick="clearPlaylistCache();return false;">Clear Playlist Cache</a> | <a href="#" onclick="emptyTrackBrowser();return false;">Empty Track Browser</a></p>
+	
+	<div id="browser">
+		<ul id="playlists"><li>Loading...</li></ul>
+		
+		<div id="trackContainer">
+			<table id="tracks" cellspacing="0">
+				<thead>
+					<tr><th>#</th><th>Name</th><th>Time</th><th>Artist</th><th>Album</th><th>Rating</th><th>Genre</th></tr>
+				</thead>
+				<tbody id="trackBody">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div id="buffer" style="clear:both;">&nbsp;</div>
+	
+	<h2>Pseudo-console</h2>
+	<pre id="pc" style="height: 10em; overflow: auto;">Loading...</pre>
+</body>
+</html>

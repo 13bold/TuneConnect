@@ -1,0 +1,119 @@
+
+  [4;36;1mSQL (0.002922)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002100)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001118)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateBugs (1)
+  [4;36;1mSQL (0.003654)[0m   [0;1mCREATE TABLE bugs ("id" INTEGER PRIMARY KEY NOT NULL, "name" varchar(255) DEFAULT NULL, "description" varchar(255) DEFAULT NULL, "user_id" integer DEFAULT NULL, "status" varchar(255) DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002624)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000857)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateBuilds (2)
+  [4;35;1mSQL (0.002635)[0m   [0mCREATE TABLE builds ("id" INTEGER PRIMARY KEY NOT NULL, "title" varchar(255) DEFAULT NULL, "platform" varchar(255) DEFAULT NULL, "component" varchar(255) DEFAULT NULL, "version" varchar(255) DEFAULT NULL, "build_number" varchar(255) DEFAULT NULL, "status" varchar(255) DEFAULT NULL, "file" varchar(255) DEFAULT NULL, "icon_file" varchar(255) DEFAULT NULL, "changelog" varchar(255) DEFAULT NULL, "requirements" varchar(255) DEFAULT NULL) [0m
+  [4;36;1mSQL (0.005059)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.001805)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateFeedbacks (3)
+  [4;36;1mSQL (0.003440)[0m   [0;1mCREATE TABLE feedbacks ("id" INTEGER PRIMARY KEY NOT NULL, "name" varchar(255) DEFAULT NULL, "user_id" integer DEFAULT NULL, "type" varchar(255) DEFAULT NULL, "content" varchar(255) DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002209)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.003671)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateFeatureRequests (4)
+  [4;35;1mSQL (0.014062)[0m   [0mCREATE TABLE feature_requests ("id" INTEGER PRIMARY KEY NOT NULL, "name" varchar(255) DEFAULT NULL, "description" varchar(255) DEFAULT NULL, "user_id" integer DEFAULT NULL, "status" varchar(255) DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002210)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000848)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreatePosts (5)
+  [4;36;1mSQL (0.003154)[0m   [0;1mCREATE TABLE posts ("id" INTEGER PRIMARY KEY NOT NULL, "name" varchar(255) DEFAULT NULL, "user_id" varchar(255) DEFAULT NULL, "content" varchar(255) DEFAULT NULL, "published" boolean DEFAULT NULL) [0m
+  [4;35;1mSQL (0.012064)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000860)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (6)
+  [4;35;1mSQL (0.004159)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY NOT NULL, "email" varchar(255) DEFAULT NULL, "password" varchar(255) DEFAULT NULL, "display_name" varchar(255) DEFAULT NULL, "first_login" boolean DEFAULT NULL) [0m
+  [4;36;1mSQL (0.012935)[0m   [0;1mUPDATE schema_info SET version = 6[0m
+  [4;35;1mSQL (0.000936)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.001391)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000494)[0m   [0mPRAGMA index_list(bugs)[0m
+  [4;36;1mSQL (0.000326)[0m   [0;1mPRAGMA index_list(builds)[0m
+  [4;35;1mSQL (0.000258)[0m   [0mPRAGMA index_list(feature_requests)[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mPRAGMA index_list(feedbacks)[0m
+  [4;35;1mSQL (0.000246)[0m   [0mPRAGMA index_list(posts)[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mPRAGMA index_list(users)[0m
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2007-11-16 17:10:16) [GET]
+  Session ID: ab0edc0e75beba814ccf44345a3a274e
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+  [4;36;1mSQL (0.001964)[0m   [0;1mSELECT version FROM schema_info[0m
+Completed in 0.25199 (3 reqs/sec) | Rendering: 0.00227 (0%) | DB: 0.00196 (0%) | 200 OK [http://0.0.0.0/rails/info/properties]
+
+
+Processing UserController#index (for 127.0.0.1 at 2007-11-16 17:10:25) [GET]
+  Session ID: a1d80d3a729066ef52e5cfdcd435a3da
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;35;1mSQL (0.000872)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000572)[0m   [0;1mSELECT * FROM users LIMIT 10 OFFSET 0[0m
+Rendering /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/scaffolds/layout.rhtml
+Completed in 0.11049 (9 reqs/sec) | Rendering: 0.00570 (5%) | DB: 0.00144 (1%) | 200 OK [http://0.0.0.0/user]
+
+
+Processing UserController#new (for 127.0.0.1 at 2007-11-16 17:10:28) [GET]
+  Session ID: a1d80d3a729066ef52e5cfdcd435a3da
+  Parameters: {"action"=>"new", "controller"=>"user"}
+Rendering /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/scaffolds/layout.rhtml
+Completed in 0.05046 (19 reqs/sec) | Rendering: 0.00147 (2%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/user/new]
+
+
+Processing UserController#create (for 127.0.0.1 at 2007-11-16 17:12:34) [POST]
+  Session ID: a1d80d3a729066ef52e5cfdcd435a3da
+  Parameters: {"user"=>{"first_login"=>"false", "display_name"=>"Matt Pat", "password"=>"0b27155cde8faca91380ede091605553a8bf78f7", "email"=>"MattPat@mattpat.net"}, "commit"=>"Create", "action"=>"create", "controller"=>"user"}
+  [4;35;1mSQL (0.001138)[0m   [0mINSERT INTO users ("first_login", "display_name", "password", "email") VALUES('f', 'Matt Pat', '0b27155cde8faca91380ede091605553a8bf78f7', 'MattPat@mattpat.net')[0m
+Redirected to http://0.0.0.0:3000/user/list
+Completed in 0.05218 (19 reqs/sec) | DB: 0.00114 (2%) | 302 Found [http://0.0.0.0/user/create]
+
+
+Processing UserController#list (for 127.0.0.1 at 2007-11-16 17:12:34) [GET]
+  Session ID: a1d80d3a729066ef52e5cfdcd435a3da
+  Parameters: {"action"=>"list", "controller"=>"user"}
+  [4;36;1mSQL (0.001213)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mUser Load (0.011849)[0m   [0mSELECT * FROM users LIMIT 10 OFFSET 0[0m
+Rendering /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/scaffolds/layout.rhtml
+Completed in 0.24480 (4 reqs/sec) | Rendering: 0.00137 (0%) | DB: 0.01306 (5%) | 200 OK [http://0.0.0.0/user/list]
+
+
+Processing UserController#index (for 127.0.0.1 at 2007-11-16 17:14:04) [GET]
+  Session ID: a1d80d3a729066ef52e5cfdcd435a3da
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;36;1mSQL (0.000991)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mUser Load (0.001031)[0m   [0mSELECT * FROM users LIMIT 10 OFFSET 0[0m
+Rendering /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/scaffolds/layout.rhtml
+Completed in 0.57148 (1 reqs/sec) | Rendering: 0.02660 (4%) | DB: 0.00202 (0%) | 200 OK [http://0.0.0.0/user]
+
+
+Processing UserController#index (for 127.0.0.1 at 2007-11-22 17:57:34) [GET]
+  Session ID: 0be37dee25e82201b4ef4cfec69fdc9b
+  Parameters: {"action"=>"index", "controller"=>"user"}
+  [4;36;1mSQL (0.001267)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mUser Load (0.001497)[0m   [0mSELECT * FROM users LIMIT 10 OFFSET 0[0m
+Rendering layouts/application
+Completed in 0.57207 (1 reqs/sec) | Rendering: 0.00653 (1%) | DB: 0.00276 (0%) | 200 OK [http://localhost/user]
+
+
+Processing UserController#edit (for 127.0.0.1 at 2007-11-22 18:00:48) [GET]
+  Session ID: 0be37dee25e82201b4ef4cfec69fdc9b
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+  [4;36;1mUser Load (0.001057)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering layouts/application
+Completed in 0.11237 (8 reqs/sec) | Rendering: 0.00156 (1%) | DB: 0.00106 (0%) | 200 OK [http://localhost/user/edit/1]
+
+
+Processing UserController#show (for 127.0.0.1 at 2007-11-22 18:00:52) [GET]
+  Session ID: 0be37dee25e82201b4ef4cfec69fdc9b
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"user"}
+  [4;35;1mUser Load (0.001048)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering layouts/application
+Completed in 0.05371 (18 reqs/sec) | Rendering: 0.00155 (2%) | DB: 0.00105 (1%) | 200 OK [http://localhost/user/show/1]
+
+
+Processing UserController#list (for 127.0.0.1 at 2007-11-22 18:00:53) [GET]
+  Session ID: 0be37dee25e82201b4ef4cfec69fdc9b
+  Parameters: {"action"=>"list", "controller"=>"user"}
+  [4;36;1mSQL (0.000831)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mUser Load (0.009868)[0m   [0mSELECT * FROM users LIMIT 10 OFFSET 0[0m
+Rendering layouts/application
+Completed in 0.08257 (12 reqs/sec) | Rendering: 0.00211 (2%) | DB: 0.01070 (12%) | 200 OK [http://localhost/user/list]

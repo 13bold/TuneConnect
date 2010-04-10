@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentSplitViewGeometry</key>
+	<dict>
+		<key>ContentSplitViewConfig</key>
+		<integer>8</integer>
+		<key>SplitViewConfig</key>
+		<integer>3</integer>
+		<key>_collapsingFrameDimension</key>
+		<real>0.0</real>
+		<key>_indexOfCollapsedView</key>
+		<integer>0</integer>
+		<key>_percentageOfCollapsedView</key>
+		<real>0.0</real>
+		<key>sizes</key>
+		<array>
+			<string>{{0, 0}, {759, 450}}</string>
+			<string>{{0, 460}, {759, 295}}</string>
+		</array>
+	</dict>
+	<key>ContentViewType</key>
+	<integer>0</integer>
+	<key>Dashboard Widget Prefs</key>
+	<dict>
+		<key>id</key>
+		<string>41a9cff0f98eb010</string>
+		<key>in-layer</key>
+		<true/>
+		<key>path</key>
+		<string>/private/var/folders/Cy/CyS-g3+AEdqIOkJTqujVF++++TI/-Tmp-/Dashcode/.TuneConnect Lite.wdgtprojJ4K1zW/TuneConnect Lite.wdgtproj/project.wdgt/</string>
+		<key>percent-offset-x</key>
+		<integer>0</integer>
+		<key>percent-offset-y</key>
+		<integer>0</integer>
+		<key>percent-type</key>
+		<integer>3</integer>
+		<key>percent-x</key>
+		<real>0.39761903882026672</real>
+		<key>percent-y</key>
+		<real>0.32666665315628052</real>
+		<key>pos-x</key>
+		<integer>746</integer>
+		<key>pos-y</key>
+		<integer>363</integer>
+	</dict>
+	<key>Design time language</key>
+	<string>en.lproj</string>
+	<key>MainSplitViewGeometry</key>
+	<dict>
+		<key>_collapsingFrameDimension</key>
+		<real>0.0</real>
+		<key>_indexOfCollapsedView</key>
+		<integer>0</integer>
+		<key>_percentageOfCollapsedView</key>
+		<real>0.0</real>
+		<key>sizes</key>
+		<array>
+			<string>{{0, 0}, {244, 776}}</string>
+			<string>{{245, 0}, {760, 776}}</string>
+		</array>
+	</dict>
+	<key>MainWindowFrame</key>
+	<string>253 170 1004 797 0 0 1680 1028 </string>
+	<key>NavigatorSplitViewGeometry</key>
+	<dict>
+		<key>ContentSplitViewConfig</key>
+		<integer>5</integer>
+		<key>SplitViewConfig</key>
+		<integer>3</integer>
+		<key>_collapsingFrameDimension</key>
+		<real>0.0</real>
+		<key>_indexOfCollapsedView</key>
+		<integer>0</integer>
+		<key>_percentageOfCollapsedView</key>
+		<real>0.0</real>
+		<key>sizes</key>
+		<array>
+			<string>{{0, 0}, {246, 420}}</string>
+			<string>{{0, 430}, {246, 325}}</string>
+		</array>
+	</dict>
+	<key>Objects view expanded items</key>
+	<array>
+		<array>
+			<integer>0</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+		</array>
+	</array>
+	<key>Objects view last selections</key>
+	<array/>
+	<key>Opened Steps</key>
+	<array>
+		<integer>0</integer>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,87 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeArchitecture = ppc;
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D5B49AC048680CD000E48DA /* IM Status */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* IM Status */,
+		);
+		codeSenseManager = C90CA2130D678FBA00CBEE31 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 225576502;
+			PBXWorkspaceStateSaveDate = 225576502;
+		};
+		sourceControlManager = C90CA2120D678FBA00CBEE31 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D5B49AC048680CD000E48DA /* IM Status */ = {
+		activeExec = 0;
+	};
+	8D5B49B7048680CD000E48DA /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 431}}";
+			sepNavSelRange = "{809, 0}";
+			sepNavVisRange = "{0, 827}";
+			sepNavWindowFrame = "{{427, 280}, {748, 559}}";
+		};
+	};
+	C90CA2120D678FBA00CBEE31 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	C90CA2130D678FBA00CBEE31 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C90CA2140D678FC600CBEE31 /* TCPluginInterface.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 431}}";
+			sepNavSelRange = "{407, 0}";
+			sepNavVisRange = "{0, 536}";
+			sepNavWindowFrame = "{{888, 118}, {748, 559}}";
+		};
+	};
+	C90CA2150D678FD100CBEE31 /* TCIMStatus.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 431}}";
+			sepNavSelRange = "{255, 50}";
+			sepNavVisRange = "{0, 312}";
+			sepNavWindowFrame = "{{15, 464}, {748, 559}}";
+		};
+	};
+	C90CA2160D678FD100CBEE31 /* TCIMStatus.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {689, 868}}";
+			sepNavSelRange = "{978, 0}";
+			sepNavVisRange = "{482, 503}";
+			sepNavWindowFrame = "{{127, 142}, {748, 559}}";
+		};
+	};
+}

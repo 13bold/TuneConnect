@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=320,initial-scale=1,user-scalable=no" />
+	<title>TuneConnect</title>
+	<link rel="apple-touch-icon" href="webclip.png" />
+	<script type="text/javascript" src="/web/prototype.js"></script>
+	<script type="text/javascript" src="/web/notifications.js"></script>
+	<script type="text/javascript" src="/web/tcserver.js"></script>
+	<script type="text/javascript" src="/web/controller.js"></script>
+	
+	<style type="text/css" media="screen">@import "iui/iui.css";</style>
+	<script type="application/x-javascript" src="iui/iui.js"></script>
+	
+	<script type="text/javascript">
+	Event.observe(window, 'load', prepareApp);
+	
+	function prepareApp() {
+		prepareClient();
+		Notifications.addObserver(updateAlbumArtwork, 'albumChanged');
+		Notifications.addObserver(updateTrackInfo, 'trackChanged');
+	}
+	
+	function updateAlbumArtwork(albumName) {
+		if (albumName !="")
+			$('artwork').src = server.composeURIForCommand('artwork', {'album':albumName});
+		else
+			$('artwork').src = '/web/no-art.png';
+		
+		setTimeout(scrollTo, 300, 0, 1);
+	}
+	
+	function updateTrackInfo(track) {
+		if (track.name == false) {
+			$('songTitle').innerHTML = 'Nothing Playing';
+			$('songArtist').innerHTML = '';
+			$('songAlbum').innerHTML = '';
+		} else {
+			$('songTitle').innerHTML = track.name;
+			$('songArtist').innerHTML = track.artist;
+			$('songAlbum').innerHTML = track.album;
+		}
+		setTimeout(scrollTo, 300, 0, 1);
+	}
+	
+	function prevTrack() {
+		server.doCommand('prevTrack');
+	}
+	
+	function nextTrack() {
+		server.doCommand('nextTrack');
+	}
+	
+	function playPause() {
+		server.doCommand('playPause');
+	}
+	</script>
+	
+	<style type="text/css">
+	#home {
+		margin: 0;
+		padding: 0;
+	}
+	#ppControls {
+		background-color: rgba(0, 0, 0, .9);
+		color: #FFFFFF;
+		margin: 0;
+		padding: 0;
+		height: 39px;
+		clear: left;
+		text-align: center;
+		padding-top: 13px;
+	}
+	#artwork {
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+	#artShield {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 280px;
+		background-color: rgba(0, 0, 0, .7);
+		padding-top: 40px;
+	}
+	#artShield h2, #artShield h3 {
+		color: #FFFFFF;
+		text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#artShield h2 {
+		font-size: 24pt;
+	}
+	#artShield h3 {
+		font-size: 14.8pt;
+	}
+	</style>
+</head>
+<body id="tc">
+	<div class="toolbar">
+		<h1 id="pageTitle"></h1>
+	</div>
+	
+	<div id="home" class="panel" title="TuneConnect" selected="true">
+		<img id="artwork" src="/artwork" width="320" height="320" alt="artwork" />
+		
+		<div id="ppControls">
+			<button onclick="prevTrack();">&laquo;</button> <button onclick="playPause();">Play/Pause</button> <button onclick="nextTrack();">&raquo;</button>
+		</div>
+		
+		<div id="artShield">
+			<h2 id="songTitle">Loading...</h2>
+			<h3 class="songInfo" id="songArtist">Please Wait</h3>
+			<h3 class="songInfo" id="songAlbum"></h3>
+			<!--<img src="../star.png" alt="star" />-->
+		</div>
+	</div>
+</body>
+</html>

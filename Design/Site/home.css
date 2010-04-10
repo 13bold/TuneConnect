@@ -1,0 +1,52 @@
+body {
+	background: #000;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+	color: #fff;
+}
+#container {
+	width: 950px;
+	margin: 70px auto 0 auto;
+	position: relative;
+}
+
+
+
+#tcPreview {
+	background: url('tc-black-bg.png') no-repeat;
+	height: 488px;
+	width: 345px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+#trackInfo {
+	position: absolute;
+	top: 56px;
+	left: 46px;
+	width: 250px;
+	font-size: 8pt;
+	text-align: center;
+	color: #000;
+}
+#artView {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 20px;
+	top: 116px;
+}
+#timeElapsed, #timeRemaining {
+	position: absolute;
+	color: #000;
+	font-size: 8pt;
+	top: 85px;
+	width: 5em;
+}
+#timeElapsed {
+	text-align: right;
+	left: 17px;
+}
+#timeRemaining {
+	text-align: left;
+	right: 30px;
+}

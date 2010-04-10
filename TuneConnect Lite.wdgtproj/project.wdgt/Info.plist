@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowNetworkAccess</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>TuneConnect Lite</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.matt.widget.TuneConnect Lite</string>
+	<key>CFBundleName</key>
+	<string>TuneConnect Lite</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CloseBoxInsetX</key>
+	<integer>15</integer>
+	<key>CloseBoxInsetY</key>
+	<integer>15</integer>
+	<key>Height</key>
+	<integer>344</integer>
+	<key>MainHTML</key>
+	<string>TuneConnect Lite.html</string>
+	<key>Width</key>
+	<integer>266</integer>
+</dict>
+</plist>

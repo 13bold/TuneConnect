@@ -1,0 +1,56 @@
+8
+
+dir
+113
+http://sparkleplus.googlecode.com/svn/trunk/Test%20Application
+http://sparkleplus.googlecode.com/svn
+
+
+
+2008-01-04T21:06:12.766984Z
+107
+atomicbird
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+60f48e4a-9719-0410-aec9-5111d4c6a560
+
+main.m
+file
+
+
+
+
+2008-01-28T21:20:01.000000Z
+1975e8d11e81e5f419a2802d59d70931
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+Test Application-Info.plist
+file
+
+
+
+
+2008-01-28T21:20:01.000000Z
+fb684bc7ac1b234bc468c151413209c6
+2008-01-04T21:06:12.766984Z
+107
+atomicbird
+
+English.lproj
+dir
+

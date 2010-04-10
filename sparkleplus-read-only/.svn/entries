@@ -1,0 +1,773 @@
+8
+
+dir
+113
+http://sparkleplus.googlecode.com/svn/trunk
+http://sparkleplus.googlecode.com/svn
+
+
+
+2008-01-17T22:03:28.654347Z
+113
+atomicbird
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+60f48e4a-9719-0410-aec9-5111d4c6a560
+
+SUAutomaticUpdateAlert.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+69644dab1de5179b86aea53e20da6a63
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+he.lproj
+dir
+
+SUUpdater+Authentication.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+04a038e07876af1139d2abb81da78da7
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+SUAutomaticUpdateAlert.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+e8db53c477752a5d10f12683c4401635
+2007-09-06T20:06:01.612731Z
+99
+atomicbird
+has-props
+
+Sparkle.icns
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+a835ab0d1534bf724d598583cbebe7d3
+2006-06-22T21:17:47.175364Z
+33
+atomicbird
+has-props
+
+fr.lproj
+dir
+
+Sparkle.xcodeproj
+dir
+
+Sparkle-leopard-features.xcodeproj
+dir
+
+nl.lproj
+dir
+
+hu.lproj
+dir
+
+profileInfo.php
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+1003924a7151eca9b47b911f809dddb9
+2006-06-13T19:52:24.491249Z
+19
+atomicbird
+has-props
+
+SUUnarchiver.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+a7e8b73b1f3c61aacecb363494a81f13
+2006-07-29T21:49:55.808414Z
+56
+atomicbird
+has-props
+
+md5.c
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+5e85f3daaaff480c043abefadf15457a
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+ca.lproj
+dir
+
+SUUnarchiver.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+bf97f3f34c391d89daf51b2c4d985fc4
+2008-01-11T00:36:20.616665Z
+111
+atomicbird
+has-props
+
+NSApplication+AppCopies.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+130353a9568a2f4ecfc868909b8f9bd5
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+md5.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+1c21976aeefe26b49b7db3946676935e
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+Makefile
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+78d77c0c74143412919492ba97ad740b
+2007-07-05T19:07:10.773737Z
+86
+evands
+
+NSApplication+AppCopies.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+71a3ef0adc49f9707774b2d8b338d049
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+profileLookup.php
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+f9fa439da4c0ccb47c2205df727bb2e4
+2006-06-09T23:50:23.748911Z
+6
+atomicbird
+has-props
+
+zh_TW.lproj
+dir
+
+id.lproj
+dir
+
+en.lproj
+dir
+
+SUAppcast.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+35f7c19f0563b9234471f75def696eb7
+2008-01-11T21:37:53.919759Z
+112
+atomicbird
+has-props
+
+cs.lproj
+dir
+
+profileDB.php
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+36869f8ccc659661b6c7d020fe751eca
+2006-06-08T19:33:50.402340Z
+2
+tph
+has-props
+
+RSS.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+9292e28ff3e072d200aea9c0d2811d8a
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+SUAppcast.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+256e5ec5818e5d5c8e63d3b2784c35a7
+2008-01-08T00:46:46.583794Z
+108
+atomicbird
+has-props
+
+ko.lproj
+dir
+
+cy.lproj
+dir
+
+it.lproj
+dir
+
+RSS.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+1235d0b729a05d3830cfd061c4dd924e
+2008-01-08T00:46:46.583794Z
+108
+atomicbird
+has-props
+
+SUUpdater.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+66b38e5d1fd61a8152560d4df0f9be4d
+2008-01-08T00:46:46.583794Z
+108
+atomicbird
+has-props
+
+SUStatus.nib
+dir
+
+sk.lproj
+dir
+
+SUUpdater.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+ec8adb4eb76006982be5de1860c67fa7
+2008-01-11T21:37:53.919759Z
+112
+atomicbird
+has-props
+
+SUUpdateAlert.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+21f88768a04dddb82d5810d764ea24a5
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+SUUtilities.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+8810967e5001414680dc86f16b58cdf4
+2007-10-08T09:07:35.591688Z
+106
+tekjew
+has-props
+
+SUConstants.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+82e30c66df23abbd3fcf71f7a0964e43
+2008-01-04T21:06:12.766984Z
+107
+atomicbird
+has-props
+
+profileConfig.php
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+8750654255561aacba93510d2dd83eb4
+2006-06-13T18:54:00.869127Z
+17
+schwa
+has-props
+
+SUUpdateAlert.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+e33032b06b536cdb2f478de96566bd20
+2007-09-06T20:06:01.612731Z
+99
+atomicbird
+has-props
+
+SUUtilities.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+f623316ffcea1deb2344bc290ac7ce63
+2007-10-08T09:07:35.591688Z
+106
+tekjew
+has-props
+
+NSFileManager+Verification.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+915a48ef443e65f93e3b4dd37d299d60
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+SUConstants.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+bd2eed765ab3a065969886884c37598b
+2008-01-04T21:06:12.766984Z
+107
+atomicbird
+has-props
+
+ja.lproj
+dir
+
+SUModelTranslation.plist
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+41b9a95597107b080f0150839af98d5a
+2008-01-17T22:03:28.654347Z
+113
+atomicbird
+
+Release Notes.rtf
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+2295890098479e564dfacaa8407f98eb
+2006-07-26T22:12:47.310828Z
+50
+atomicbird
+
+fi.lproj
+dir
+
+NSFileManager+Verification.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+ce8b24a6fb72342cf000e7fbf405f4d0
+2007-09-06T22:36:13.144488Z
+102
+tekjew
+has-props
+
+README - profile.rtf
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+82c3e3645e0336ec17f9a217c4dfa50a
+2006-06-13T19:32:02.915745Z
+18
+atomicbird
+
+NSString+extras.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+05a0e50f50ded168cd0782c4d64f9d47
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+pl.lproj
+dir
+
+th.lproj
+dir
+
+no.lproj
+dir
+
+Test Application
+dir
+
+NSString+extras.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+a2e5ce95a0f548af07527624dd881037
+2008-01-11T00:36:20.616665Z
+111
+atomicbird
+has-props
+
+tr.lproj
+dir
+
+AppController.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+1350b4cd8568dc739209004bf44f4ed2
+2006-06-08T19:33:50.402340Z
+2
+tph
+has-props
+
+ru.lproj
+dir
+
+sparkletestcast.xml
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+aa622445da15a8bbc7a25690292f1501
+2006-06-10T21:20:15.748105Z
+12
+atomicbird
+
+NSFileManager+Authentication.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+bd70a80cf60ca4f800bd4c1ea6f2b0e4
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+AppController.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+dc9551cfedf4200bb239af62305feced
+2006-06-13T19:32:02.915745Z
+18
+atomicbird
+has-props
+
+NSFileManager+Authentication.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+615013ed9bf3bacc5687086780e9624c
+2008-01-08T00:46:46.583794Z
+108
+atomicbird
+has-props
+
+Info.plist
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+11b2e6bbb4f44bed3baba502ecece70c
+2007-07-17T20:39:59.061106Z
+93
+atomicbird
+
+SUStatusController.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+d6903093d95ec53026f678a10fdefd62
+2006-06-08T19:20:01.899895Z
+1
+tph
+has-props
+
+zh_CN.lproj
+dir
+
+Sparkle.h
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+8eea7651e59b48010854c59d56c550ac
+2006-07-29T21:49:55.808414Z
+56
+atomicbird
+has-props
+
+Sparkle_Prefix.pch
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+adf77f6cfbb8664447a435de4fe82b91
+2006-06-08T19:20:01.899895Z
+1
+tph
+
+SUStatusController.m
+file
+
+
+
+
+2008-01-28T21:20:15.000000Z
+33c2bae09b7a03d1d364b2ec9fb6cfbb
+2007-09-06T20:06:01.612731Z
+99
+atomicbird
+has-props
+
+es.lproj
+dir
+
+is.lproj
+dir
+
+License.txt
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+29284fe742e0698808c766d3384bf6c1
+2006-06-08T19:20:01.899895Z
+1
+tph
+
+SUStatusChecker.h
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+458d8deb30cdbe4aeb383817854ea064
+2006-07-28T16:04:17.543893Z
+53
+atomicbird
+has-props
+
+SUAppcastItem.h
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+56ec83172b4647bc19baf6b1e922716a
+2006-07-29T21:49:55.808414Z
+56
+atomicbird
+has-props
+
+da.lproj
+dir
+
+SUUpdater+DSA.m
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+4254ab0dc4906de44c39477d133c7072
+2006-07-29T21:49:55.808414Z
+56
+atomicbird
+has-props
+
+profileInfo.sql
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+9989e47ebdc90c257665b37137e4d6ec
+2006-06-09T22:30:25.012513Z
+3
+atomicbird
+has-props
+
+SUStatusChecker.m
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+2adba99dfd1c7c2ac2d873693668488a
+2006-07-13T19:34:47.022893Z
+47
+atomicbird
+has-props
+
+de.lproj
+dir
+
+sv.lproj
+dir
+
+SUAppcastItem.m
+file
+
+
+
+
+2008-01-28T21:20:16.000000Z
+34bcca4337e220b479b43bfd733381bc
+2007-09-06T22:19:22.039351Z
+101
+tekjew
+has-props
+

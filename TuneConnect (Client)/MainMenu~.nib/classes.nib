@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {CLASS = ArtworkController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {makeConnection = id; }; 
+            CLASS = BonjourController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {hostField = NSComboBox; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = CustomView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = DividerFreeSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = FrontRowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fullScreenView = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = HUDWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = PolishedMiniWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = PolishedWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            ACTIONS = {checkForUpdates = id; }; 
+            CLASS = SUUpdater; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = iPodWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = iphoneView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = keyEnabledPanel; LANGUAGE = ObjC; SUPERCLASS = NSPanel; }
+    ); 
+    IBVersion = 1; 
+}

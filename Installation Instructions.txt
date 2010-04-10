@@ -1,0 +1,21 @@
+Installing the Server
+----------------------
+TuneConnect Server must be installed on any computer that you want to control using TuneConnect. The server is responsible for receiving commands, and then passing them along to iTunes. Once installed, you may configure it to your liking, and then turn it "On", which allows it to notify other computers on your network that it is available.
+
+To install TuneConnect Server, simply double-click the "TuneConnect Server.prefPane" icon in the TuneConnect package. The server will be installed in System Preferences, from which you can change its settings (including setting a password, which is recommended), and start and stop it. To start the server, slide the switch in the bottom left of the window to the "On" position. If the server is running when you change settings, you must turn it "Off", then back "On" again after a few seconds.
+
+Installing the Client
+----------------------
+TuneConnect (the client) must be installed on any computer that you want to use as a remote control for iTunes. The client is responsible for taking commands from you, and sending them over the network to the server for iTunes to process. The official client is capable of automatically finding any TuneConnect servers on your network.
+
+To install TuneConnect, simply drag the TuneConnect application icon to your Applications folder (or anywhere, for that matter).
+
+Using the Web Client
+---------------------
+TuneConnect Server runs on any computer running OS X 10.4 (Tiger) or higher, but the client runs best on OS X 10.5 (Leopard) or higher. As such, for computers incapable of using the native OS X client (including older Macs, PCs, and mobile devices), TuneConnect Server provides a web-based client which can be accessed from any web browser.
+
+On Mac OS X or Windows in Safari, or on Windows in IE 7 with Bonjour for Windows installed, TuneConnect Web Clients will automatically be detected. In Safari, click the Bookmarks icon on the bookmark toolbar (a small book icon), then choose Bonjour in the sidebar. You should see any TuneConnect servers on the network listed. Double-clicking one will open the web client for that computer. For other browsers and devices, the web client is accessible at port 4242 (by default) of the computer's name or IP address (for instance, http://192.168.2.7:4242 or http://Johns-iMac.local.:4242).
+
+Automatic Updates
+------------------
+Though TuneConnect Server does not yet support such functionality, the TuneConnect client has support for automatic updates and update notifications. These can be enabled under "Preferences..." from within TuneConnect. Sending anonymous system information helps me to develop better software, so I ask that you also please check that box as well. Your input counts!

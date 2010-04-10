@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>TuneConnect Web</title>
+	<script type="text/javascript" src="prototype.js"></script>
+	<script type="text/javascript" src="notifications.js"></script>
+	<script type="text/javascript" src="tcserver.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+	<script type="text/javascript">
+	Event.observe(window, 'load', prepareApplication);
+	
+	function prepareApplication() {
+		prepareClient();
+		Notifications.addObserver(updateAlbumArtwork, 'albumChanged');
+		Notifications.addObserver(updateTrackInfo, 'trackChanged');
+		
+		if (navigator.platform.search(/Mac/) != -1) {
+			address = location.href;
+			this.identifier = address.replace('http://', '').replace(/\/.*$/, '');
+			$('openClientButton').onclick = function(){location.href = 'tunage://'+identifier}.bind(this);
+		} else {
+			$('openClientButton').style.display = 'none';
+		}
+	}
+	
+	function updateAlbumArtwork(albumName) {
+		if (albumName != "")
+			$('artwork').src = server.composeURIForCommand('artwork', {'album':albumName});
+		else
+			$('artwork').src = 'no-art.png';
+	}
+	
+	function updateTrackInfo(track) {
+		if (track.name == false) {
+			$('songTitle').innerHTML = 'Nothing Playing';
+			$('songArtist').innerHTML = '';
+			$('songAlbum').innerHTML = '';
+			
+			updateRating(0);
+		} else {
+			$('songTitle').innerHTML = track.name;
+			$('songArtist').innerHTML = track.artist;
+			$('songAlbum').innerHTML = track.album;
+		
+			updateRating(track.rating);
+		}
+	}
+	
+	function updateRating(newRating) {
+		r1 = 'dot.png';
+		r2 = 'dot.png';
+		r3 = 'dot.png';
+		r4 = 'dot.png';
+		r5 = 'dot.png';
+		
+		if (newRating >= 10)
+			r1 = 'half.png';
+		if (newRating >= 20)
+			r1 = 'star.png';
+		if (newRating >= 30)
+			r2 = 'half.png';
+		if (newRating >= 40)
+			r2 = 'star.png';
+		if (newRating >= 50)
+			r3 = 'half.png';
+		if (newRating >= 60)
+			r3 = 'star.png';
+		if (newRating >= 70)
+			r4 = 'half.png';
+		if (newRating >= 80)
+			r4 = 'star.png';
+		if (newRating >= 90)
+			r5 = 'half.png';
+		if (newRating >= 100)
+			r5 = 'star.png';
+		
+		$('r1').src = r1;
+		$('r2').src = r2;
+		$('r3').src = r3;
+		$('r4').src = r4;
+		$('r5').src = r5;
+	}
+	
+	function pushRatingUpdate(newRating) {
+		server.doCommand('setTrackRating', {'rating':newRating});
+		updateRating(newRating);
+	}
+	
+	</script>
+	<style type="text/css">
+	body			{ background-color: #222; color: #fff; margin: 0; padding: 0; font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif; }
+	#window			{ width: 750px; height: 100%; background-color: #fff; margin: 50px auto 0 auto; position: relative; }
+	
+	#windowChrome	{ background-image:url('top-chrome.png'); background-repeat: repeat-x; height: 36px; width: 714px; padding: 18px; }
+	#header			{ margin: 0; padding: 0; color: #000; }
+	
+	#display		{ width: 100%; height: 375px; background-color: #000; position: relative; }
+	#artwork		{ position: absolute; top: 0px; left: 0px; width: 300px; height: 300px; margin: 37px; }
+	#trackInfo		{ position: absolute; margin-right: 37px; left: 375px; top: 50px; height: 210px; overflow: auto; }
+	#trackInfo ul	{ padding: 0; margin: 0; list-style-type: none; }
+	#trackInfo ul li	{ margin-bottom: .4em; }
+	#songTitle		{ font-size: 26pt; font-weight: bold; }
+	#songArtist		{ font-size: 16pt; font-weight: bold; }
+	#songAlbum		{ font-size: 16pt; }
+	#controls		{ position: absolute; right: 37px; left: 375px; bottom: 50px; height: 30px; text-align: center; }
+	#clearRating	{ margin-left: 10em; }
+	
+	#sourceChooser	{ width: 100%; height: 60px; background-color: #b4b4b4; position: relative; }
+	#openClientButton { position: absolute; right: 20px; top: 15px; font-size: 12pt; }
+	</style>
+</head>
+<body id="tuneconnect">
+	<div id="window">
+		<div id="windowChrome">
+			<h1 id="header">TuneConnect</h1>
+		</div>
+		
+		<div id="display">
+			<img src="/artwork" alt="Album Art" id="artwork" />
+			
+			<div id="trackInfo">
+				<ul>
+					<li id="songTitle">Loading...</li>
+					<li id="songArtist">Please wait while we connect to the server.</li>
+					<li id="songAlbum"></li>
+					<li id="songRating"><img id="r1" src="dot.png" alt="1" onclick="pushRatingUpdate('20');" /> <img id="r2" src="dot.png" alt="2" onclick="pushRatingUpdate('40');" /> <img id="r3" src="dot.png" alt="3" onclick="pushRatingUpdate('60');" /> <img id="r4" src="dot.png" alt="4" onclick="pushRatingUpdate('80');" /> <img id="r5" src="dot.png" alt="5" onclick="pushRatingUpdate('100');" /> <button id="clearRating" onclick="pushRatingUpdate('0');">Clear</button></li>
+				</ul>
+			</div>
+			
+			<div id="controls">
+				<button onclick="server.doCommand('prevTrack');">&laquo;</button> <button onclick="server.doCommand('playPause');">Play/Pause</button> <button onclick="server.doCommand('nextTrack');">&raquo;</button>
+			</div>
+		</div>
+		
+		<div id="sourceChooser">
+			<button type="button" id="openClientButton">Open in Native Client</button>
+		</div>
+		
+		<div id="trackContainer">
+			
+		</div>
+	</div>
+</body>
+</html>
